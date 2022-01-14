@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Invoice } from '../shared/models/invoice.type';
 import { InvoicesService } from '../shared/services/invoices.service';
@@ -19,11 +19,15 @@ export class CreateInvoiceComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   form = new FormGroup({
-    amount: new FormControl(),
-    status: new FormControl(),
+    amount: new FormControl((''),Validators.required),
+    status: new FormControl((''),Validators.required),
   });
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
+  }
+
+  hasError(): boolean{
+    return !this.form.valid;
   }
 
   onSubmit(){

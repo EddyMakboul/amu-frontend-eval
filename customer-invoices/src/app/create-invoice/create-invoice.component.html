@@ -1,12 +1,35 @@
-<form (ngSubmit)="onSubmit()" [formGroup]="form">
+<div class="form-content">
+  <div class="box-root flex-flex padding-top--24  flex-direction--column" style="flex-grow: 1; z-index: 9;">
+    <div class="box-root flex-flex padding-top--48 padding-bottom--24  flex-justifyContent--center">
+      <h1>Customer App</h1>
+    </div>
+    <div class="formbg-outer">
+      <div class="formbg">
+        <div class="padding-horizontal--48">
+          <span class="padding-bottom--15">Créer un nouveau client</span>
+          <form (ngSubmit)="onSubmit()" [formGroup]="form">
 
-  <input formControlName="amount" name="amount" type="text" class="amount">
+            <mat-form-field floatLabel="always" style="width: 100%;">
+              <mat-label>Montant de la facture</mat-label>
+              <input matInput formControlName="amount" name="amount" type="number" class="amount" placeholder="0">
+              <span matPrefix>€&nbsp;</span>
+              <mat-error *ngIf="this.form.controls['amount'].hasError('required')">Le montant est nécessaire</mat-error>
+            </mat-form-field>
 
-  <select formControlName="status" name="status" class="status">
-    <option [ngValue]="true">PAID</option>
-    <option [ngValue]="false">SENT</option>
-  </select>
+            <mat-form-field style="width: 100%;">
+              <mat-label>Status</mat-label>
+              <mat-select formControlName="status" name="status">
+                <mat-option [value]="true">PAID</mat-option>
+                <mat-option [value]="false">SENT</mat-option>
+              </mat-select>
+            </mat-form-field>
 
-  <button type="submit">Enregistrer la facture</button>
-
-</form>
+            <div class="field padding-bottom--24 flex-flex flex-justifyContent--center">
+              <button mat-raised-button color="primary" type="submit" name="submit" [disabled]="hasError()" >Enregistrer</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
