@@ -1,5 +1,5 @@
 export type Customer = {
-  id?:number;
+  id:number;
   fullName: string;
   email: string;
 }

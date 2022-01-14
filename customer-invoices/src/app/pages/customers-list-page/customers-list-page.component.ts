@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Customers } from 'src/app/shared/models/customer.type';
+import { CustomersService } from 'src/app/shared/services/customers.service';
 
 @Component({
   selector: 'app-customers-list-page',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersListPageComponent implements OnInit {
 
-  constructor() { }
+  customers : Customers = [];
+
+  constructor(private customersService : CustomersService) { }
 
   ngOnInit(): void {
+    this.customersService.findAll().subscribe( (customers) => {
+      this.customers = customers;
+    })
   }
 
 }

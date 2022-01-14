@@ -7,17 +7,20 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
 import { CustomersListComponent } from './customers-list/customers-list.component';
-import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 import { CreateInvoiceComponent } from './create-invoice/create-invoice.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatListItem, MatListModule, MatListOption, MatNavList, MatSelectionList } from '@angular/material/list';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MaterialExampleModule } from './material.module';
+import { InvoicesService } from './shared/services/invoices.service';
+import { CustomersService } from './shared/services/customers.service';
+import { CustomersListPageComponent } from './pages/customers-list-page/customers-list-page.component';
+import { CustomerDetailsPageComponent } from './pages/customer-details-page/customer-details-page.component';
+import { CustomerInvoicesComponent } from './customer-invoices/customer-invoices.component';
 
 const routes: Routes = [
-  {path: '', component: CustomersListComponent},
+  {path: '', component: CustomersListPageComponent},
   {path: 'create', component: CreateCustomerComponent },
-  {path: ':id', component: CustomerDetailComponent },
+  {path: ':id', component: CustomerDetailsPageComponent },
   {path: ':id/invoices/add', component:CreateInvoiceComponent}
 
 ]
@@ -25,9 +28,11 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     CreateCustomerComponent,
-    CustomersListComponent,
-    CustomerDetailComponent,
     CreateInvoiceComponent,
+    CustomerDetailsPageComponent,
+    CustomersListPageComponent,
+    CustomersListComponent,
+    CustomerInvoicesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,7 @@ const routes: Routes = [
     MatNativeDateModule,
     MaterialExampleModule,
   ],
-  providers: [],
+  providers: [InvoicesService,CustomersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

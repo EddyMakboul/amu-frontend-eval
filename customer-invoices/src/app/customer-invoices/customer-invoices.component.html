@@ -1,0 +1,14 @@
+<table class="invoices-table">
+  <thead>
+    <tr>
+      <th>Facture</th>
+      <th>Sent?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let invoice of invoices">
+      <td>{{invoice.amount}}</td>
+      <td>{{invoice.status ? "SENT": "NOT SENT"}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,17 +1,8 @@
 
-<div class="content">
-  <h1>Liste des clients</h1>
-
-  <div class="add-client">
-    <button mat-raised-button color="primary" routerLink="/create">Créer un client</button>
-  </div>
-
-  <div class="list-client">
-    <mat-selection-list [multiple]="false">
-      <mat-list-option *ngFor="let customer of customers" routerLink="/{{customer.id}}">
-        {{ customer.fullName }}
-      </mat-list-option>
-    </mat-selection-list>
-  </div>
-
+<div class="customers-list">
+  <mat-selection-list [multiple]="false">
+    <mat-list-option *ngFor="let customer of customers" routerLink="/{{customer.id}}">
+      {{ customer.fullName }}
+    </mat-list-option>
+  </mat-selection-list>
 </div>

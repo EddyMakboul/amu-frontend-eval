@@ -1,1 +1,10 @@
-<p>customer-details-page works!</p>
+<div *ngIf="customer">
+  <div class="customer-details">
+    <p>{{ customer?.fullName }}</p>
+    <p>{{ customer?.email }}</p>
+
+    <a class="invoice-create" routerLink="/{{customer?.id}}/invoices/add">Créer une facture</a>
+    <app-customer-invoices [invoices]="invoices"></app-customer-invoices>
+  </div>
+  <a routerLink="/" class="back-to-customers">Retour aux clients</a>
+</div>

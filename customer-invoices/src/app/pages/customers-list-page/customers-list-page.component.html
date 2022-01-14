@@ -1,1 +1,10 @@
-<p>customers-list-page works!</p>
+<div class="content">
+  <h1>Liste des clients</h1>
+
+  <div class="add-client">
+    <button mat-raised-button color="primary" routerLink="/create">Créer un client</button>
+  </div>
+
+  <app-customers-list [customers]="customers"></app-customers-list>
+
+</div>
