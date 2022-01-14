@@ -1,10 +1,10 @@
 
 <form (ngSubmit)="onSubmit()" [formGroup]="form">
 
-    <input formControlName="fullName" type="text" class="fullName">
+    <input formControlName="fullName" name="fullName" type="text" class="fullName">
 
-    <input formControlName="email" type="email" class="email">
+    <input formControlName="email" name="email" type="email" class="email">
 
-    <button type="submit">Ajouter</button>
+    <button type="submit">Enregistrer</button>
 
 </form>

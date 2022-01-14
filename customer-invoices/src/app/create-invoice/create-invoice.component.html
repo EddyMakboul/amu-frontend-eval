@@ -1,12 +1,12 @@
 <form (ngSubmit)="onSubmit()" [formGroup]="form">
 
-  <input formControlName="amount" type="text" class="amount">
+  <input formControlName="amount" name="amount" type="text" class="amount">
 
-  <select formControlName="status" class="status">
-    <option [ngValue]="true">SENT </option>
-    <option [ngValue]="false">NOT SENT </option>
+  <select formControlName="status" name="status" class="status">
+    <option [ngValue]="true">PAID</option>
+    <option [ngValue]="false">SENT</option>
   </select>
 
-  <button type="submit">Ajouter</button>
+  <button type="submit">Enregistrer la facture</button>
 
 </form>

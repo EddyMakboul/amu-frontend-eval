@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Customers } from '../shared/models/customer.type';
+import { Customer, Customers } from '../shared/models/customer.type';
 import { CustomersService } from '../shared/services/customers.service';
 
 @Component({
@@ -18,5 +18,6 @@ export class CustomersListComponent implements OnInit {
       this.customers = customers;
     })
   }
+
 
 }

@@ -9,6 +9,10 @@ import { CreateCustomerComponent } from './create-customer/create-customer.compo
 import { CustomersListComponent } from './customers-list/customers-list.component';
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 import { CreateInvoiceComponent } from './create-invoice/create-invoice.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatListItem, MatListModule, MatListOption, MatNavList, MatSelectionList } from '@angular/material/list';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MaterialExampleModule } from './material.module';
 
 const routes: Routes = [
   {path: '', component: CustomersListComponent},
@@ -29,8 +33,10 @@ const routes: Routes = [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
-
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MatNativeDateModule,
+    MaterialExampleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
