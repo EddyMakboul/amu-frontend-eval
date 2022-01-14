@@ -1,10 +1,34 @@
+<div class="form-content">
+    <div class="box-root flex-flex padding-top--24  flex-direction--column" style="flex-grow: 1; z-index: 9;">
+      <div class="box-root flex-flex padding-top--48 padding-bottom--24  flex-justifyContent--center">
+        <h1>Customer App</h1>
+      </div>
+      <div class="formbg-outer">
+        <div class="formbg">
+          <div class="padding-horizontal--48">
+            <span class="padding-bottom--15">Créer un nouveau client</span>
+            <form (ngSubmit)="onSubmit()" [formGroup]="form">
 
-<form (ngSubmit)="onSubmit()" [formGroup]="form">
+              <mat-form-field style="width: 100%;">
+                <mat-label>Nom Prénom</mat-label>
+                <input matInput type="text" matInput formControlName="fullName" name="fullName" placeholder="Ex. Eddy Makboul">
+                <mat-error *ngIf="this.form.controls['fullName'].hasError('required')">Le nom et prénom est nécessaire</mat-error>
 
-    <input formControlName="fullName" name="fullName" type="text" class="fullName">
+              </mat-form-field>
 
-    <input formControlName="email" name="email" type="email" class="email">
+              <mat-form-field  style="width: 100%;">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email" name="email" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="this.form.controls['email'].hasError('required')">L'email est nécessaire</mat-error>
+                <mat-error *ngIf="this.form.controls['email'].hasError('email')">l'email n'est pas au bon format</mat-error>
+              </mat-form-field>
 
-    <button type="submit">Enregistrer</button>
-
-</form>
+              <div class="field padding-bottom--24 flex-flex flex-justifyContent--center">
+                <button mat-raised-button color="primary" type="submit" name="submit" [disabled]="hasError()" >Enregistrer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

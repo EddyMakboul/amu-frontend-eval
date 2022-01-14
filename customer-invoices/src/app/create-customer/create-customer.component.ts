@@ -13,14 +13,18 @@ export class CreateCustomerComponent implements OnInit {
   constructor(private customersService: CustomersService, private router: Router) { }
 
   form = new FormGroup({
-    fullName: new FormControl(),
-    email: new FormControl()
+    fullName: new FormControl((''),Validators.required),
+    email: new FormControl((''),[Validators.required,Validators.email])
   });
 
   onSubmit(){
     this.customersService.create(this.form.value).subscribe( (customer)=> {
       this.router.navigate(['/']);
     })
+  }
+
+  hasError(): boolean{
+    return !this.form.valid;
   }
 
   ngOnInit(): void {
