@@ -3,7 +3,17 @@
   <p>{{ customer?.email }}</p>
 
   <a class="invoice-create" routerLink="/{{customer?.id}}/invoices/add"> Create invoice</a>
-  <ul>
-    <li *ngFor=""></li>
-  </ul>
+  <table>
+    <thead>
+      <tr>montant facture</tr>
+      <tr>Envoyé</tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let invoice of invoices">
+        <td>{{invoice.amount}}</td>
+        <td>{{invoice.status ? "SENT": "NOT SENT"}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+<a routerLink="/" class="back-to-customers">retour à l'acceuil</a>

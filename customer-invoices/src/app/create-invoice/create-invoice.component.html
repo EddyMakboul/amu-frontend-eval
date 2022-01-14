@@ -1,1 +1,12 @@
-<p>create-invoice works!</p>
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+  <input formControlName="amount" type="text" class="amount">
+
+  <select formControlName="status" class="status">
+    <option [ngValue]="true">SENT </option>
+    <option [ngValue]="false">NOT SENT </option>
+  </select>
+
+  <button type="submit">Ajouter</button>
+
+</form>

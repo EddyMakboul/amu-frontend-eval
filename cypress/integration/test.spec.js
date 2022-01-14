@@ -60,7 +60,10 @@ describe("Invoices feature", () => {
       .get('button[type="submit"]')
       .click();
 
-    cy.get("a.customer-details").contains("Elise Dupont").first().click();
+    cy.get("a.customer-details")
+      .contains("Elise Dupont")
+      .first()
+      .click();
 
     cy.get("a.invoice-create")
       .first()

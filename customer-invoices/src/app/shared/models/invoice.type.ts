@@ -1,8 +1,8 @@
 export type Invoice = {
   id: number,
-  amout: number,
+  amount: number,
   status: boolean,
   id_customer:number
 }
 
-export type Invoices = Invoices[]
+export type Invoices = Invoice[]
