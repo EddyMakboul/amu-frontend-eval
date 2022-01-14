@@ -88,3 +88,16 @@ input.amount {
 }
 
 ::ng-deep .mat-form-field-required-marker { color: red }
+
+.form-select{
+  border: none;
+}
+
+span.border-box-select {
+  height: 1px;
+  background-color: rgba(0,0,0,42);
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
