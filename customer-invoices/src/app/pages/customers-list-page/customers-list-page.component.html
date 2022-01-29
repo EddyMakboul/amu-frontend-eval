@@ -1,10 +1,13 @@
-<div class="content">
-  <h1>Liste des clients</h1>
+<div class="customers-page">
+
+  <h1 class="title">Liste des clients</h1>
 
   <div class="add-client">
-    <button mat-raised-button color="primary" routerLink="/create">Créer un client</button>
+    <button mat-raised-button class="button-add-client" routerLink="/create">Créer un client</button>
   </div>
-
-  <app-customers-list [customers]="customers"></app-customers-list>
+  
+  <div fxLayout="row" fxLayoutAlign="center center" >
+    <app-customers-list class="customers-list"  [customers]="customers"></app-customers-list>
+  </div>
 
 </div>

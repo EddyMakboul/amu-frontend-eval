@@ -11,11 +11,15 @@ import { CustomersService } from '../shared/services/customers.service';
 export class CreateCustomerComponent implements OnInit {
 
   constructor(private customersService: CustomersService, private router: Router) { }
+  form: FormGroup;
+ 
 
-  form = new FormGroup({
-    fullName: new FormControl((''),Validators.required),
-    email: new FormControl((''),[Validators.required,Validators.email])
-  });
+  ngOnInit(): void {
+    this.form = new FormGroup({
+      fullName: new FormControl(null,Validators.required),
+      email: new FormControl(null,[Validators.required, Validators.email])
+    });
+  }
 
   onSubmit(){
     this.customersService.create(this.form.value).subscribe( (customer)=> {
@@ -25,9 +29,6 @@ export class CreateCustomerComponent implements OnInit {
 
   hasError(): boolean{
     return !this.form.valid;
-  }
-
-  ngOnInit(): void {
   }
 
 }

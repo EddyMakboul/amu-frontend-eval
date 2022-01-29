@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Customer } from 'src/app/shared/models/customer.type';
-import { Invoices } from 'src/app/shared/models/invoice.type';
+import { Customer } from 'src/app/shared/types/customer.type';
+import { Invoices } from 'src/app/shared/types/invoice.type';
 import { CustomersService } from 'src/app/shared/services/customers.service';
 import { InvoicesService } from 'src/app/shared/services/invoices.service';
 
@@ -17,8 +17,7 @@ export class CustomerDetailsPageComponent implements OnInit {
 
   constructor(private customersService: CustomersService,
     private route: ActivatedRoute,
-    private invoicesService: InvoicesService,
-    private router: Router) { }
+    private invoicesService: InvoicesService) { }
 
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'))
@@ -31,10 +30,6 @@ export class CustomerDetailsPageComponent implements OnInit {
     this.invoicesService.findAllByCustomerId(this.id).subscribe( invoices => {
       this.invoices =invoices;
     })
-  }
-
-  redirect(): void {
-    this.router.navigate(['/',this.id,'/invoices/add'])
   }
 
 }

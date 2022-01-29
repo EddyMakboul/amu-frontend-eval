@@ -1,7 +1,7 @@
 
-<div class="customers-list">
-  <mat-selection-list [multiple]="false">
-    <mat-list-option *ngFor="let customer of customers" routerLink="/{{customer.id}}">
+<div>
+  <mat-selection-list class="customers-list" [multiple]="false">
+    <mat-list-option class="mat-list-option" *ngFor="let customer of customers" routerLink="/{{customer.id}}">
       {{ customer.fullName }}
     </mat-list-option>
   </mat-selection-list>

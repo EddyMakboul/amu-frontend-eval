@@ -20,7 +20,7 @@
                 <mat-label>Email</mat-label>
                 <input type="email" matInput formControlName="email" name="email" placeholder="Ex. pat@example.com">
                 <mat-error *ngIf="this.form.controls['email'].hasError('required')">L'email est nécessaire</mat-error>
-                <mat-error *ngIf="this.form.controls['email'].hasError('email')">l'email n'est pas au bon format</mat-error>
+                <mat-error *ngIf="this.form.controls['email'].hasError('email')">L'email n'est pas au bon format</mat-error>
               </mat-form-field>
 
               <div class="field padding-bottom--24 flex-flex flex-justifyContent--center">

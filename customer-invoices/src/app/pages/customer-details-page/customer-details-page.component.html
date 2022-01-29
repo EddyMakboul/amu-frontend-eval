@@ -1,10 +1,15 @@
 <div *ngIf="customer">
+  <div class="customer-photo">
+    <img src="assets/customer_pp.png" width="200px">
+  </div>
   <div class="customer-details">
     <p>{{ customer?.fullName }}</p>
     <p>{{ customer?.email }}</p>
-
-    <a class="invoice-create" routerLink="/{{customer?.id}}/invoices/add">Créer une facture</a>
-    <app-customer-invoices [invoices]="invoices"></app-customer-invoices>
   </div>
-  <a routerLink="/" class="back-to-customers">Retour aux clients</a>
+
+  <button class="invoice-create" routerLink="/{{customer?.id}}/invoices/add">Créer une facture</button>
+
+  <app-customer-invoices class="customer-invoices" [invoices]="invoices"></app-customer-invoices>
+  
+  <button routerLink="/" class="back-to-customers">Retour aux clients</button>
 </div>

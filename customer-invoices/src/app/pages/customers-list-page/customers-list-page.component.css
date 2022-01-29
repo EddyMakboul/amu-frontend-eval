@@ -1,0 +1,20 @@
+h1.title {
+    text-align: center;
+    margin-top: 46px;
+}
+
+.add-client {
+    position: absolute;
+    left: 13%;
+}
+
+.customers-list {
+    width: 31%;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.button-add-client{
+    background-color: rgb(252, 252, 252);
+    color: black;
+}

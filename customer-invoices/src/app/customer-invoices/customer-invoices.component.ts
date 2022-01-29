@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Invoices } from '../shared/models/invoice.type';
+import { Invoices } from '../shared/types/invoice.type';
 
 @Component({
   selector: 'app-customer-invoices',

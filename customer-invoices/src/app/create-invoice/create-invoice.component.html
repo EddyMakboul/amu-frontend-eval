@@ -16,13 +16,6 @@
               <mat-error *ngIf="this.form.controls['amount'].hasError('required')">Le montant est nécessaire</mat-error>
             </mat-form-field>
 
-            <!-- <mat-form-field style="width: 100%;">
-              <mat-label>Status</mat-label>
-              <mat-select formControlName="status" name="status">
-                <mat-option [value]="true">PAID</mat-option>
-                <mat-option [value]="false">SENT</mat-option>
-              </mat-select> -->
-            <!-- </mat-form-field> -->
             <div class="form-floating">
               <select class="form-select" formControlName="status" name="status" aria-label="Default select example" >
                 <option ngValue="true">PAID</option>

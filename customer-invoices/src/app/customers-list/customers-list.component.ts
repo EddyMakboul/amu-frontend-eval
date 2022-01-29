@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Customers } from '../shared/models/customer.type';
+import { Customers } from '../shared/types/customer.type';
 
 @Component({
   selector: 'app-customers-list',

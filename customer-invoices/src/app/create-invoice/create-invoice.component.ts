@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Invoice } from '../shared/models/invoice.type';
+import { Invoice } from '../shared/types/invoice.type';
 import { InvoicesService } from '../shared/services/invoices.service';
 
 @Component({
@@ -22,6 +22,7 @@ export class CreateInvoiceComponent implements OnInit {
     amount: new FormControl((''),Validators.required),
     status: new FormControl((''),Validators.required),
   });
+  
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
   }
@@ -33,7 +34,6 @@ export class CreateInvoiceComponent implements OnInit {
   onSubmit(){
     this.invoice = this.form.value;
     this.invoice.id_customer = this.id;
-    console.log(this.invoice)
 
     this.invoicesService.create(this.form.value).subscribe( (invoice)=> {
       this.router.navigate(['/',this.id]);

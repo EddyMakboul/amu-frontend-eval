@@ -4,6 +4,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatTableModule} from '@angular/material/table'
 
 @NgModule({
   exports: [
@@ -12,6 +15,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    FlexLayoutModule,
+    MatProgressSpinnerModule,
+    MatTableModule,
   ]
 })
 export class MaterialExampleModule {}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Customers } from 'src/app/shared/models/customer.type';
+import { Customers } from 'src/app/shared/types/customer.type';
 import { CustomersService } from 'src/app/shared/services/customers.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { CustomersService } from 'src/app/shared/services/customers.service';
 export class CustomersListPageComponent implements OnInit {
 
   customers : Customers = [];
-
+ 
   constructor(private customersService : CustomersService) { }
 
   ngOnInit(): void {
