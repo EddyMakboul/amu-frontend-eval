@@ -3,7 +3,7 @@
     grid-template-columns: 0.8fr 1.4fr 0.8fr;
     grid-template-rows: 1fr 0.3fr 1.7fr;
     grid-gap: 0px 0px;
-    gap: 0px 0px;
+    gap: 20px 0px;
     grid-auto-flow: row;
     grid-template-areas:
         "photo customer-info customer-info"
@@ -12,14 +12,18 @@
     align-items: center;
 }
   
-.photo { grid-area: photo; }
+.photo { 
+    grid-area: photo;
+    text-align: center; }
   
 .customer-info { 
     grid-area: customer-info;
     font-size: 25px;
  }
   
-.customer-invoices { grid-area: customer-invoices; }
+.customer-invoices { 
+    grid-area: customer-invoices;
+    margin-bottom: auto; }
 
 
 .buttons {
@@ -27,7 +31,7 @@
     display: flex;
     gap: 40px;
     justify-content: flex-start;
-    margin-left: 24px;
+    margin-left: -10px;
 }
 
 .invoice-create{
@@ -35,5 +39,10 @@
 }
 
 .back-to-customers{
-    background-color: red;
+    background-color: rgb(207, 37, 37);
 }
+
+.color-white{
+    color: white;
+}
+

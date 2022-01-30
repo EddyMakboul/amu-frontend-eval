@@ -79,3 +79,9 @@ label {
 .gap-20px{
   gap: 20px;
 }
+
+
+.color-bleu{
+  background-color: #5469d4;
+  color: white;
+}

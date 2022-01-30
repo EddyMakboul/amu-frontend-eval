@@ -9,8 +9,8 @@
   </div>
 
   <div class="buttons">
-    <button mat-raised-button class="invoice-create" routerLink="/{{customer?.id}}/invoices/add">Créer une facture</button>
-    <button mat-raised-button routerLink="/" class="back-to-customers">Retour aux clients</button>
+    <button mat-raised-button class="invoice-create color-white" routerLink="/{{customer?.id}}/invoices/add">Créer une facture</button>
+    <button mat-raised-button routerLink="/" class="back-to-customers color-white">Retour aux clients</button>
   </div>
 
   <app-invoices-list class="customer-invoices" [invoices]="invoices"></app-invoices-list>
