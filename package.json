@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "serve": "npm i --prefix ./customer-invoices/ & npm start --prefix ./customer-invoices/"
+    "serve": "npm i & npm i --prefix ./customer-invoices/ & npm start --prefix ./customer-invoices/"
   },
   "repository": {
     "type": "git",
