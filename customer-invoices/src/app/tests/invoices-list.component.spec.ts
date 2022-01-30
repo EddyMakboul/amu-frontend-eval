@@ -1,23 +1,23 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing"
 import { By } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
-import { CustomerInvoicesComponent } from "../customer-invoices/customer-invoices.component";
+import { InvoicesListComponent } from "../invoices-list/invoices-list.component";
 
 
 
 describe('CustomerInvoicesComponent',() => {
-    let fixture: ComponentFixture<CustomerInvoicesComponent>;
+    let fixture: ComponentFixture<InvoicesListComponent>;
 
-    let component: CustomerInvoicesComponent;
+    let component: InvoicesListComponent;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
 
-            declarations:[CustomerInvoicesComponent],
+            declarations:[InvoicesListComponent],
             imports:[RouterModule.forRoot([])]
         }).compileComponents();
 
-        fixture = TestBed.createComponent(CustomerInvoicesComponent);
+        fixture = TestBed.createComponent(InvoicesListComponent);
 
         component = fixture.componentInstance;
     });

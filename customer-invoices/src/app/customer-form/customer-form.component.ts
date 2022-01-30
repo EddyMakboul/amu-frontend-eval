@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 import { CustomersService } from '../shared/services/customers.service';
 
 @Component({
-  selector: 'app-create-customer',
-  templateUrl: './create-customer.component.html',
-  styleUrls: ['./create-customer.component.css']
+  selector: 'app-customer-form',
+  templateUrl: './customer-form.component.html',
+  styleUrls: ['./customer-form.component.css']
 })
-export class CreateCustomerComponent implements OnInit {
+export class CustomerFormComponent implements OnInit {
 
   constructor(private customersService: CustomersService, private router: Router) { }
   form: FormGroup;

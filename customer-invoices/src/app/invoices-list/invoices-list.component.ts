@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Invoices } from '../shared/types/invoice.type';
 
 @Component({
-  selector: 'app-customer-invoices',
-  templateUrl: './customer-invoices.component.html',
-  styleUrls: ['./customer-invoices.component.css']
+  selector: 'app-invoices-list',
+  templateUrl: './invoices-list.component.html',
+  styleUrls: ['./invoices-list.component.css']
 })
-export class CustomerInvoicesComponent implements OnInit {
+export class InvoicesListComponent implements OnInit {
 
   @Input()
   invoices:Invoices

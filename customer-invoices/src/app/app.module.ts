@@ -5,9 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
-import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import { CustomerFormComponent } from './customer-form/customer-form.component';
 import { CustomersListComponent } from './customers-list/customers-list.component';
-import { CreateInvoiceComponent } from './create-invoice/create-invoice.component';
+import { InvoiceFormComponent } from './invoice-form/invoice-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MaterialExampleModule } from './material.module';
@@ -15,24 +15,24 @@ import { InvoicesService } from './shared/services/invoices.service';
 import { CustomersService } from './shared/services/customers.service';
 import { CustomersListPageComponent } from './pages/customers-list-page/customers-list-page.component';
 import { CustomerDetailsPageComponent } from './pages/customer-details-page/customer-details-page.component';
-import { CustomerInvoicesComponent } from './customer-invoices/customer-invoices.component';
+import { InvoicesListComponent } from './invoices-list/invoices-list.component';
 
 const routes: Routes = [
   {path: '', component: CustomersListPageComponent},
-  {path: 'create', component: CreateCustomerComponent },
+  {path: 'create', component: CustomerFormComponent },
   {path: ':id', component: CustomerDetailsPageComponent },
-  {path: ':id/invoices/add', component:CreateInvoiceComponent}
-
+  {path: ':id/invoices/add', component:InvoiceFormComponent}
 ]
+
 @NgModule({
   declarations: [
     AppComponent,
-    CreateCustomerComponent,
-    CreateInvoiceComponent,
+    CustomerFormComponent,
+    InvoiceFormComponent,
     CustomerDetailsPageComponent,
     CustomersListPageComponent,
     CustomersListComponent,
-    CustomerInvoicesComponent
+    InvoicesListComponent
   ],
   imports: [
     BrowserModule,

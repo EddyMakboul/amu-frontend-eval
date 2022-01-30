@@ -5,11 +5,11 @@ import { Invoice } from '../shared/types/invoice.type';
 import { InvoicesService } from '../shared/services/invoices.service';
 
 @Component({
-  selector: 'app-create-invoice',
-  templateUrl: './create-invoice.component.html',
-  styleUrls: ['./create-invoice.component.css']
+  selector: 'app-invoice-form',
+  templateUrl: './invoice-form.component.html',
+  styleUrls: ['./invoice-form.component.css']
 })
-export class CreateInvoiceComponent implements OnInit {
+export class InvoiceFormComponent implements OnInit {
 
   invoice: Invoice;
   id:number;

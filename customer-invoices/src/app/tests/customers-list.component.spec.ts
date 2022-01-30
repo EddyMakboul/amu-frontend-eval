@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from "@angular/core/testing"
 import { By } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { CustomersListComponent } from "../customers-list/customers-list.component"
+import { CustomersService } from "../shared/services/customers.service";
 
 
 describe('CustomersListComponent',() => {
@@ -13,7 +14,8 @@ describe('CustomersListComponent',() => {
         await TestBed.configureTestingModule({
 
             declarations:[CustomersListComponent],
-            imports:[RouterModule.forRoot([])]
+            imports:[RouterModule.forRoot([])],
+            providers:[CustomersService]
         }).compileComponents();
 
         fixture = TestBed.createComponent(CustomersListComponent);
