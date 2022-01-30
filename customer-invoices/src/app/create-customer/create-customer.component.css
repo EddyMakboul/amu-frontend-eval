@@ -75,3 +75,7 @@ label {
 }
 
 ::ng-deep .mat-form-field-required-marker { color: red }
+
+.gap-20px{
+  gap: 20px;
+}

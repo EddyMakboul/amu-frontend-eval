@@ -1,4 +1,6 @@
-table.invoices-table {
+table {
+    text-align: center;
+    max-width: 419px;
     margin-left: auto;
     margin-right: auto;
 }

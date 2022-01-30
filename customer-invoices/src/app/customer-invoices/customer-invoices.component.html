@@ -1,14 +1,15 @@
-<table class="invoices-table">
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Facture</th>
-      <th>Sent?</th>
+      <th scope="col">Facture</th>
+      <th scope="col">Sent?</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let invoice of invoices">
+    <tr *ngFor="let invoice of invoices" scope="row">
       <td>{{invoice.amount}}</td>
       <td>{{invoice.status ? "SENT": "NOT SENT"}}</td>
     </tr>
   </tbody>
 </table>
+

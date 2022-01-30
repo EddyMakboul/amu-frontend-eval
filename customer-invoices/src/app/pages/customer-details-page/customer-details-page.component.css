@@ -1,10 +1,39 @@
-.customer-photo{
-    text-align: center;
-    margin-top: 55px;
+.container {  
+    display: grid;
+    grid-template-columns: 0.8fr 1.4fr 0.8fr;
+    grid-template-rows: 1fr 0.3fr 1.7fr;
+    grid-gap: 0px 0px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "photo customer-info customer-info"
+        "buttons buttons buttons"
+        ". customer-invoices .";
+    align-items: center;
+}
+  
+.photo { grid-area: photo; }
+  
+.customer-info { 
+    grid-area: customer-info;
+    font-size: 25px;
+ }
+  
+.customer-invoices { grid-area: customer-invoices; }
+
+
+.buttons {
+    grid-area: buttons;
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start;
+    margin-left: 24px;
 }
 
-.customer-details{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 25px;
+.invoice-create{
+    background-color: #5469d4;
+}
+
+.back-to-customers{
+    background-color: red;
 }

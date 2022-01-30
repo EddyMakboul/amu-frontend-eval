@@ -1,6 +1,7 @@
 h1.title {
     text-align: center;
     margin-top: 46px;
+    color: #5469d4;
 }
 
 .add-client {
@@ -15,6 +16,6 @@ h1.title {
 }
 
 .button-add-client{
-    background-color: rgb(252, 252, 252);
-    color: black;
+    background-color: white;
+    color: #5469d4;
 }

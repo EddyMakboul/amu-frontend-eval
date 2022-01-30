@@ -23,8 +23,9 @@
                 <mat-error *ngIf="this.form.controls['email'].hasError('email')">L'email n'est pas au bon format</mat-error>
               </mat-form-field>
 
-              <div class="field padding-bottom--24 flex-flex flex-justifyContent--center">
+              <div class="field padding-bottom--24 flex-flex flex-justifyContent--center gap-20px">
                 <button mat-raised-button color="primary" type="submit" name="submit" [disabled]="hasError()" >Enregistrer</button>
+                <button mat-raised-button color="warn" type="button" routerLink="/">Annuler</button>
               </div>
             </form>
           </div>
